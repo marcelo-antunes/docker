@@ -1,0 +1,3 @@
+docker exec -it ubuntu /bin/bash
+
+docker exec -it python /bin/bash
