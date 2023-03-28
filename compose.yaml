@@ -8,7 +8,9 @@ services:
     stdin_open: true
     tty: true
   python:
-    image: python:3-alpine
+    build:
+      context: ./Python
+      dockerfile: python.Dockerfile
     container_name: python
     volumes:
       - ../..:/home/windows
