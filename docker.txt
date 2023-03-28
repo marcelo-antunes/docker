@@ -2,4 +2,5 @@ docker compose up -d ubuntu
 docker exec -it ubuntu /bin/bash
 
 docker compose up -d python
+docker compose run --rm python arquivo
 docker attach python
