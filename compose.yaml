@@ -1,18 +1,18 @@
 version: '3.8'
 services:
   ubuntu:
-    image: ubuntu
+    image: ubuntu:latest
     container_name: ubuntu
     volumes:
-      - ../..:/home/windows
+      - ./app:/usr/src/app
     stdin_open: true
     tty: true
   python:
     build:
-      context: ./Python
-      dockerfile: python.Dockerfile
+      context: .
+      dockerfile: dockerfiles/python.Dockerfile
     container_name: python
     volumes:
-      - ../..:/home/windows
+      - ./app:/usr/src/app
     stdin_open: true
     tty: true
