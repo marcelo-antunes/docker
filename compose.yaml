@@ -6,7 +6,7 @@ services:
       dockerfile: dockerfiles/ubuntu.dockerfile
     container_name: ubuntu
     volumes:
-      - ./app:/app
+      - ../..:/home
     stdin_open: true
     tty: true
   python:
@@ -15,6 +15,6 @@ services:
       dockerfile: dockerfiles/python.dockerfile
     container_name: python
     volumes:
-      - ./app:/app
+      - ../Curriculo:/app
     stdin_open: true
     tty: true
