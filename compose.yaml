@@ -3,7 +3,7 @@ services:
   ubuntu:
     build:
       context: .
-      dockerfile: dockerfiles/ubuntu.Dockerfile
+      dockerfile: dockerfiles/ubuntu.dockerfile
     container_name: ubuntu
     volumes:
       - ./app:/app
@@ -12,7 +12,7 @@ services:
   python:
     build:
       context: .
-      dockerfile: dockerfiles/python.Dockerfile
+      dockerfile: dockerfiles/python.dockerfile
     container_name: python
     volumes:
       - ./app:/app
