@@ -1,8 +1,19 @@
+# Cria containers refazendo o build
 docker compose up -d --build
 
-docker compose run --rm ubuntu
-docker compose up -d ubuntu
-docker compose exec -it ubuntu /bin/bash
+# Cria container ubuntu temporário com prompt
+docker compose run --rm -it ubuntu
 
-docker compose run --rm python arquivo
+# Cria container ubuntu(1), entra no prompt(2) e remove o container(3)
+docker compose up -d ubuntu
+docker compose exec ubuntu /bin/bash
+docker compose down
+
+# Cria container temporário pytho para executar um script
+docker compose run --rm python script
+
+# Entra no prompt do SO do python
+docker compose exec python /bin/bash
+
+# Entra no interpretador python
 docker attach python
